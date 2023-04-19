@@ -1,0 +1,11 @@
+.example-card {
+    max-width: 800px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  .timeline-container {
+    padding-top: 32px;
+  }

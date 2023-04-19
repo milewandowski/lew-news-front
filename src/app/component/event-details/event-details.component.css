@@ -1,0 +1,12 @@
+.example-header-image {
+    background-size: cover;
+  }
+
+  .rentals-management-container {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .reservations-table-container {
+    width: 70%;
+  }

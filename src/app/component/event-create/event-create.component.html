@@ -1,0 +1,67 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlex="100" class="login-container">
+
+    <div style="min-width: 300px; width: 25%">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <h1 class="login-header">Add News</h1>
+        </div>
+
+        <form fxLayout="column" [formGroup]="createForm" (ngSubmit)="onSubmit()">
+
+            <mat-form-field appearance="outline" class="material-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+                <mat-error *ngIf="name.invalid">Name is invalid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-form-field">
+                <mat-label>Start Date</mat-label>
+                <input matInput [matDatepicker]="startDatePicker" formControlName="startDate">
+                <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #startDatePicker></mat-datepicker>
+                <mat-error *ngIf="startDate.invalid">Start Date is invalid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="example-form-field">
+                <mat-label>End Date (Not required)</mat-label>
+                <input matInput [matDatepicker]="endDateDatePicker" formControlName="endDate">
+                <mat-datepicker-toggle matSuffix [for]="endDateDatePicker"></mat-datepicker-toggle>
+                <mat-datepicker #endDateDatePicker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="material-full-width">
+                <mat-label>Short Description</mat-label>
+                <textarea matInput formControlName="shortDesc"></textarea>
+                <mat-error *ngIf="shortDesc.invalid">Description is invalid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="material-full-width">
+                <mat-label>Long Description</mat-label>
+                <textarea matInput formControlName="longDesc"></textarea>
+                <mat-error *ngIf="longDesc.invalid">Description is invalid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="material-full-width">
+                <mat-label>Image URL</mat-label>
+                <input matInput formControlName="imageUrl">
+                <mat-error *ngIf="imageUrl.invalid">Image URL is invalid</mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="material-full-width">
+                <mat-label>Type</mat-label>
+                <mat-select formControlName="typeId">
+                    <mat-option *ngFor="let type of types" [value]="type.id">
+                        {{type.name}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <button [disabled]="createForm.invalid || isLoading" type="submit" class="main-button" fxLayout="row"
+                fxLayoutAlign="center center" [ngClass]="{'loading': isLoading}">
+                <span *ngIf="!isLoading">CREATE EVENT</span>
+                <span *ngIf="isLoading">
+                    <mat-spinner [diameter]="40"></mat-spinner>
+                </span>
+            </button>
+        </form>
+    </div>
+</div>

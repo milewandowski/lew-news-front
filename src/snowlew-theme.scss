@@ -1,0 +1,44 @@
+@import "../node_modules/@angular/material/theming";
+
+@include mat-core();
+
+$snowlew-palette: (
+  50 : #e8efef,
+  100 : #c5d8d8,
+  200 : #9ebebe,
+  300 : #77a3a4,
+  400 : #5a9091,
+  500 : #3d7c7d,
+  600 : #377475,
+  700 : #2f696a,
+  800 : #275f60,
+  900 : #1a4c4d,
+  A100 : #8cfdff,
+  A200 : #59fbff,
+  A400 : #26faff,
+  A700 : #0dfaff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$snowlew-primary: mat-palette($snowlew-palette);
+$snowlew-accent: mat-palette($snowlew-palette);
+$snowlew-warn: mat-palette($mat-red);
+
+$snowlew-theme: mat-light-theme($snowlew-primary, $snowlew-accent, $snowlew-warn);
+
+@include angular-material-theme($snowlew-theme);

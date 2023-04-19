@@ -1,0 +1,29 @@
+<div fxLayout="column" fxLayoutAlign="center center" class="timeline-container">
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-stepper orientation="vertical">
+
+            <ng-template matStepperIcon="edit">
+                <mat-icon>arrow_right</mat-icon>
+            </ng-template>
+
+            <div *ngFor="let event of events">
+
+                <ng-template matStepperIcon="{{event.type.color}}">
+                    <mat-icon>{{event.type.color}}</mat-icon>
+                </ng-template>
+
+                <mat-step state="{{event.type.color}}">
+                    <ng-template matStepLabel>{{event.startDate}} <span *ngIf="event.endDate !== null">-
+                            {{event.endDate}} </span>{{event.name}}</ng-template>
+                    <mat-card class="example-card">
+                        <img mat-card-image src="{{event.imageUrl}}" alt="Photo of event">
+                        <mat-card-content>
+                            <p>{{event.longDesc}}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-step>
+            </div>
+        </mat-stepper>
+    </div>
+</div>

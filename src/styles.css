@@ -1,0 +1,6 @@
+html, body { height: 100%; }
+body { margin: 0; height:100vh; font-family: Roboto, "Helvetica Neue", sans-serif; display:flex; flex-direction:column; }
+
+.accent-color {
+  background-color: #3d7c7d;
+}

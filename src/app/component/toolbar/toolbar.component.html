@@ -1,0 +1,23 @@
+<div fxLayout="column" class="toolbar-wrapper">
+
+  <div fxLayout="row" fxFlexFill>
+
+    <div fxLayout="row" fxLayoutAlign="start center" fxFlex="30">
+      <a class="logo-link" fxLayout="row" routerLink="/timeline">
+        <mat-icon class="logo-icon">event</mat-icon>
+        <div class="logo-text">LEWNEWS</div>
+      </a>
+    </div>
+
+    <div fxLayout="row" fxFlex="65" fxLayoutAlign="end center">
+
+      <a [routerLink]="'/timeline'" class="toolbar-link">Timeline</a>
+      <a [routerLink]="'/all-events'" class="toolbar-link">News Overview</a>
+      <a [routerLink]="'/login'" class="toolbar-link" *ngIf="!isUserLoggedIn">Sign in</a>
+      <a [routerLink]="'/events-management'" class="toolbar-link" *ngIf="isUserLoggedIn">News Management</a>
+      <a [routerLink]="'/account'" class="toolbar-link" *ngIf="isUserLoggedIn">Account</a>
+      <a [routerLink]="" (click)="logout()" class="toolbar-link" *ngIf="isUserLoggedIn">Sign out</a>
+    </div>
+  </div>
+</div>
+<mat-divider></mat-divider>

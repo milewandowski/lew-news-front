@@ -1,0 +1,51 @@
+.material-full-width {
+  width: 100%;
+}
+
+.main-button {
+  margin-top: 24px;
+  margin-bottom: 18px;
+  width: 100%;
+  padding: 20px 48px;
+  background-color: #3d7c7d;
+  color: #FFF;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.main-button:hover {
+  background-color: #777;
+}
+
+.login-container {
+  color: #444;
+}
+
+a {
+  margin-top: 24px;
+  font-size: 1rem;
+  color: #444;
+}
+
+a:hover {
+  color: #3d7c7d;
+}
+
+.no-account {
+  font-size: 1rem;
+}
+
+mat-form-field {
+  font-size: 1.1rem;
+}
+
+.login-header {
+  margin-top: 64px;
+  font-size: 2rem;
+}
+
+.loading {
+  background-color: #777;
+}

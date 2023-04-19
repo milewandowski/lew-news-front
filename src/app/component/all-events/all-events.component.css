@@ -1,0 +1,57 @@
+.rentals-management-container {
+    padding-top: 32px;
+  }
+  
+  .reservations-table {
+    color: #444;
+    width: 100%;
+  }
+  
+  .reservations-table-container {
+    width: 70%;
+  }
+  
+  a {
+    margin-top: 24px;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  a:hover {
+    color: #3d7c7d;
+  }
+  
+  .active-link {
+    border-bottom: 1px solid #3d7c7d;
+  }
+  
+  .mat-row .mat-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: #333;
+  }
+  
+  mat-divider {
+    border-color: #EEE;
+  }
+  
+  
+  .main-btn {
+    width: 260px;
+    padding: 12px 20px;
+    background-color: #3d7c7d;
+    color: #FFF;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+  }
+  
+  .main-btn:hover {
+    background-color: #777;
+  }
+  
