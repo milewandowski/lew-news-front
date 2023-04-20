@@ -1,0 +1,38 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+    <div class="about-container">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <h1>About</h1>
+        </div>
+        <p>
+            Aplikacja podzielona została na front-end oraz back-end co umożliwia separację poszczególnych
+            komponentów, a tym samym zapewnia między innymi skalowalność, czystszy kod itp. Dodatkowo w
+            przypadku większych aplikacji dochodzi jeszcze podział na mikroserwisy i mikrofrontendy jednak w
+            przypadku tak małej aplikacji nie miałoby to większego sensu. Framework użyty na froncie to
+            Angular, który pozwala tworzyć tak zwane Single Page Applications eliminujące zjawisko nadmiernego
+            przeładowywania się strony. Angular opiera się na architekturze opartej o komponenty, korzysta z
+            wstrzykiwania zależności i ogólnie usprawnia wytwarzanie aplikacji. W aplikacji zostały również użyte
+            różnego rodzaju biblioteki jak angular material czy biblioteka odpowiadająca za łatwe zarządzanie
+            tokenem JWT po stronie frontu.
+        </p>
+        <p>
+            Back-end to aplikacja napisana w Javie z wykorzystaniem framework'a Spring. Back-end odpowiada
+            za logikę biznesową, komunikację z bazą danych (z racji prostoty projektu wykorzystałem bazę osadzoną
+            w apliakcji H2) oraz autoryzację z wykorzystaniem tokenów JWT. Do uporządkowania kodu aplikacji
+            zastosowana została architektura heksagonalna (portów i adapterów). Pozwala ona na to by rdzeń
+            aplikacji był oddzielony od jakichkolwiek zewnętrznych zależności, a tym samym kod
+            infrastruktury jest odseparowany od kodu biznesowego i na odwrót
+        </p>
+        <p>
+            Dużą rolę w bezpieczeństwie aplikacji odgrywa framework, który zapewnia między innymi
+            zabezpieczenie przed SQL Injection, natomiast samodzielnie została stworzona cała struktura (w tym
+            listenery zapytań, token providery itp.) odpowiadająca za przetwarzanie tokenów JWT. Hasła w aplikacji
+            są hashowane za pomocą silnego algorytmu dodatkowo dodającego „salt”.
+        </p>
+        <p>
+            Aplikacja posiada przejrzysty interfejs zapewniający użytkownikowi podstawowe funkcjonalności. Na stronie
+            timeline użytkownik ma dostęp do najnowszych newsów natomiast na stronie News overview możliwy jest
+            przegląd wszystkich newsów w postaci tabelrycznej z filtrami oraz sortowaniem. Po zalogowaniu admin ma
+            dostęp do panelu Management, gdzie może dodawać, aktualizować czy usuwać newsy.
+        </p>
+    </div>
+</div>

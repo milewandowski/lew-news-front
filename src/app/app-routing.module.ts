@@ -10,6 +10,7 @@ import { EventCreateComponent } from './component/event-create/event-create.comp
 import { EventUpdateComponent } from './component/event-update/event-update.component';
 import { EventsManagementComponent } from './component/events-management/events-management.component';
 import { AccountComponent } from './component/account/account.component';
+import { AboutComponent } from './component/about/about.component';
 
 const routes: Routes = [
   {path: 'event-create', component: EventCreateComponent, canActivate: [AuthenticationGuard]},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'all-events', component: AllEventsComponent},
   {path: 'event-details/:id', component: EventDetailsComponent},
   {path: 'timeline', component: TimelineComponent},
+  {path: 'about', component: AboutComponent},
   {path: 'login', component: LoginComponent},
   {path: '**', redirectTo: '/timeline', pathMatch: 'full'}
 ];

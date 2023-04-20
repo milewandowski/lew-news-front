@@ -53,6 +53,7 @@ import { EventCreateComponent } from './component/event-create/event-create.comp
 import { EventUpdateComponent } from './component/event-update/event-update.component';
 import { EventsManagementComponent } from './component/events-management/events-management.component';
 import { AccountComponent } from './component/account/account.component';
+import { AboutComponent } from './component/about/about.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { AccountComponent } from './component/account/account.component';
     EventCreateComponent,
     EventUpdateComponent,
     EventsManagementComponent,
-    AccountComponent
+    AccountComponent,
+    AboutComponent
   ], 
    imports: [
     BrowserModule,
